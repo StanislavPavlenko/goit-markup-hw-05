@@ -121,6 +121,7 @@ ul {
   padding-left: 0;
 }
 .header-item {
+  position: relative;
   margin-right: 40px;
 }
 
@@ -141,6 +142,16 @@ ul {
   padding-top: 24px;
   padding-bottom: 24px;
   display: block;
+}
+
+.header-link:hover:after {
+  content: "";
+  border-bottom: 4px solid;
+  border-radius: 4px;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
 }
 
 .header-address {
@@ -653,4 +664,19 @@ section-team-icon {
   min-width: 408px;
   min-height: 576px;
   background-color: #fcfcfc;
+}
+
+.btn-modal {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  background-color: var(--accent-color);
+  background-image: url(../images/close-black-18dp.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
 }
