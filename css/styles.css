@@ -144,7 +144,7 @@ ul {
   display: block;
 }
 
-.header-link:hover:after {
+.header-link:hover::after {
   content: "";
   border-bottom: 4px solid;
   border-radius: 4px;
@@ -617,7 +617,7 @@ section-team-icon {
   line-height: calc(24 / 16);
   color: var(--btn-background-color);
   background-color: var(--logo-color);
-  transform: translatey(100%);
+  transform: translateY(100%);
   transition-property: transform;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
