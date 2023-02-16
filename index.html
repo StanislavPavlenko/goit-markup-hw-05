@@ -31,7 +31,9 @@
           >
           <ul class="header-list list">
             <li class="header-item">
-              <a class="header-link link carrent" href="./index.html">Studio</a>
+              <a class="header-link link carrent text-color" href="./index.html"
+                >Studio</a
+              >
             </li>
             <li class="header-item">
               <a class="header-link link" href="./portfolio.html">Portfolio</a>
@@ -458,9 +460,16 @@
         </div>
       </div>
     </footer>
+
+    <!-- MODAL -->
+
     <div class="backdrop is-hidden" data-modal>
       <div class="modal">
-        <button class="btn-modal" type="button" data-modal-close></button>
+        <button class="btn-modal" type="button" data-modal-close>
+          <svg class="modal-icon" width="8" height="8">
+            <use href="./images/icons.svg#a"></use>
+          </svg>
+        </button>
       </div>
     </div>
     <script src="./js/modal.js"></script>
