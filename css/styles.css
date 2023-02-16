@@ -150,14 +150,12 @@ ul {
 .carrent::after {
   content: "";
   position: absolute;
-  border-radius: 4px;
+  border-radius: 2px;
   height: 4px;
   width: 100%;
-  bottom: 0;
+  bottom: -1px;
   left: 0;
   background-color: var(--btn-hover-color);
-  color: var(--btn-hover-color);
-  transform: translate(0, 1px);
 }
 
 .header-link.text-color {
@@ -182,6 +180,7 @@ ul {
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: var(--minor-color);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .header-address-list {
@@ -586,7 +585,8 @@ section-team-icon {
   border-radius: 4px;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .btn-item:last-child {
@@ -598,8 +598,6 @@ section-team-icon {
   color: var(--white-color);
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
-  border: 1px solid var(--accent-color);
-  border-radius: 4px;
   border-color: transparent;
 }
 
@@ -628,6 +626,11 @@ section-team-icon {
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.portfolio-link:hover .animation-text,
+.portfolio-link:focus .animation-text {
+  transform: translateY(0);
+}
+
 .portfolio-link:hover,
 .portfolio-link:focus {
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
@@ -641,9 +644,6 @@ section-team-icon {
   overflow: hidden;
 }
 
-.animation:hover .animation-text {
-  transform: translateY(0);
-}
 .animation-text {
   position: absolute;
   bottom: 0;
@@ -653,6 +653,7 @@ section-team-icon {
   padding-top: 40px;
   padding-left: 32px;
   font-size: 16px;
+  letter-spacing: 0.02em;
   line-height: calc(24 / 16);
   color: var(--btn-background-color);
   background-color: var(--logo-color);
@@ -707,6 +708,9 @@ section-team-icon {
   min-height: 576px;
   background-color: #fcfcfc;
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
 }
 
 .backdrop.is-hidden .modal {
@@ -717,6 +721,8 @@ section-team-icon {
   position: absolute;
   top: 24px;
   right: 24px;
+  padding: 0;
+  font-size: 0;
   border-radius: 50%;
   width: 24px;
   height: 24px;
@@ -725,5 +731,8 @@ section-team-icon {
   cursor: pointer;
   margin: 0;
 }
-.modal-icon {
+
+.btn-modal:hover {
+  background-color: var(--btn-hover-color);
+  color: var(--white-color);
 }
